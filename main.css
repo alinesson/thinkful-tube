@@ -1,0 +1,356 @@
+/*for mobile phones*/
+
+	/*targets all images*/
+img { 
+	max-width: 100%; 
+	height: auto; }
+
+	/*targets background image container*/
+#title-container{ 
+	background-image: 
+		linear-gradient(rgba(249, 255, 226, 0.6), rgba(249, 255, 226, 0.6)),
+		url(background.jpeg);
+	height: 60vh;
+	width: 100%;
+	background-size: cover;
+}
+
+	/*targets container holding form*/
+#title-div{
+	position: relative;
+	height: 60vh;
+	width: 100%;
+}
+
+	/*targets container of title */
+#title{
+	color: white;
+	position: absolute;
+	bottom: 5px;
+	right: 0;
+	font-family: 'Lobster', cursive;
+}
+
+	/*targets title directly*/
+#title > h1 {
+	font-size: 24px;
+}
+
+/*search bar styling*/
+
+	/*targets text area input for form*/
+#js-search{
+	position: absolute;
+	border: none;
+	top: 15%;
+	left: 0; 
+  	right: 0; 
+  	margin-left: auto; 
+  	margin-right: auto; 
+	width: 250px;
+	height: 75px;
+	background-color: #D2DBD5;
+	color: #666b75;
+	font-family: 'Playfair Display', serif;
+	font-size: 22px;
+}
+
+#js-search:focus{
+	border: 1px solid #FF3D70;
+}
+
+/*submit button styling*/
+
+	/*targets form submit button*/
+#js-submit{
+	position: absolute;
+	color: white;
+  	background: #FF3D70;
+  	border: solid 2px #FF3D70;
+  	text-shadow: none;
+  	box-shadow: none;
+	left: 0; 
+  	right: 0; 
+  	margin-left: auto; 
+  	margin-right: auto; 
+  	top: 60%;
+  	width: 150px;
+  	height: 50px;
+  	font-size: 24px;
+  	font-family: 'Playfair Display', serif;
+}
+
+#js-submit:hover{
+	background-color: #A32748;
+	border: solid 2px #A32748;
+}
+
+#js-submit:active{
+	background-color: #FF95B1;
+	border: solid 2px #FF95B1;
+}
+
+/*results section styling*/
+
+	/*targets entire container - holds results and nav buttons*/
+#results-section{
+	position: relative;
+	min-height: 40vh;
+	height: 100%;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	background-color: #D2DBD5;
+	width: cover;
+	font-size: 30px;
+	background-size: cover;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+	/*targets the div that holds all of the results,
+	child of #result-section*/
+#results-container{
+	padding-top: 35px;
+	padding-bottom: 45px;
+}
+
+
+	/*targets the div that enables bootstrapping for each result,
+	child of #results-container*/
+#js-all-results{
+	width: 100%;
+}
+
+	/*targets rows and keeps them within the #js-all-results section
+	prevents rows from extending past the width of the viewport*/
+#js-all-results > .row {
+	width: 100%;
+}
+
+/*#js-all-results:last-child{
+	margin-bottom: 10%;
+}*/
+
+	/*the div holding one instance of the result
+	and allows bootstrap styling,
+	child of #js-all-results*/
+.result{
+	position: relative;
+	margin-bottom: 7%;
+}
+
+	/*the div that holds all of the html for the item instance*/
+.item-container{
+	position: relative;
+	font-size: 22px;
+	color: #666b75;
+	padding-top: 50px;
+	height: auto;
+	padding-bottom: 50px;
+}
+
+/*targets the video title div*/
+.result-title {
+	height: 62px;
+	overflow: auto;
+}
+
+.result-title > span {
+	display: inline-block;
+	width: 80%;
+}
+
+	/*targets pseudobutton that links to similar videos*/
+.channel-id{
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin-left: auto; 
+  	margin-right: auto;
+  	margin-top: 1%; 
+	width: 250px;
+	color: white;
+  	background: #FF3D70;
+  	border: solid 2px #FF3D70;
+  	text-shadow: none;
+  	box-shadow: none;
+  	height: 60px;
+}
+
+.channel-id:hover{
+	background-color: #A32748;
+	border: solid 2px #A32748;
+}
+
+.channel-id:focus{
+	background-color: #FF95B1;
+	border: solid 2px #FF95B1;
+}
+
+	/*targets psuedobutton text*/
+.channel-id-title{
+	font-family: 'Playfair Display', serif;
+	font-size: 2em;
+	color: white;
+}
+
+/*nav button styling*/
+
+.hidden{
+	display: none;
+}
+
+	/*targets left side buttons*/
+.js-previous-button{
+	height: 50px;
+	width: 75px;
+	margin: 0;
+	position: absolute;
+	background-color: #3B82A0;
+	left: 0;
+	box-shadow: none;
+	border: 0;
+}
+
+.js-previous-button:active{
+	background-color: #265366;
+}
+
+	/*targets top left button*/
+#top-previous{
+	margin-top: 1%;
+	margin-left: 1%;
+}
+
+	/*targets bottom left button*/
+#bottom-previous{
+	margin-bottom: 1%;
+	margin-left: 1%;
+	bottom: 0;
+}
+
+	/*targets right side buttons*/
+.js-next-button{
+	height: 50px;
+	width: 75px;
+	margin: 0;
+	position: absolute;
+	background-color: #3B82A0;
+	right: 0;
+	box-shadow: none;
+	border: 0
+}
+
+.js-next-button:active{
+	background-color: #265366;
+}
+
+	/*targets top right button*/
+#top-next{
+	margin-top: 1%;
+	margin-right: 1%;
+}
+
+	/*targets bottom right button*/
+#bottom-next{
+	margin-bottom: 1%;
+	margin-right: 1%;
+	bottom: 0;
+}
+
+	/*targets glyphs inside the buttons*/
+.glyphicon{
+	font-size: 30px;
+	color: white;
+}
+
+@media (min-width: 700px){
+/*title*/
+
+	/*targets title text specifically*/
+	#title > h1 {
+	font-size: 3em;
+	}
+
+/*search form*/
+
+		/*targets text area input for form*/
+	#js-search{
+		width: 400px;
+		height: 75px;
+		font-size: 24px;
+		top: 35%;
+	}
+
+		/*targets form submit button*/
+	#js-submit{
+		width: 250px;
+		height: 50px;
+		margin-top: 10px;
+	}
+
+/*results*/
+
+		/*targets the div that holds only the results, 
+		child of results-section*/
+	#result-container{
+		height: 200px;
+	}
+
+		/*the div that holds all of the html for the item instance*/
+	.item-container{
+		position: relative;
+		font-size: 22px;
+		margin-top: 20px;
+		height: auto;
+	}
+
+		/*targets name of thumbnail*/
+	.result-title {
+	font-size: 18px;
+	}
+
+		/*targets pseudobutton that links to similar videos*/
+	.channel-id{
+		position: absolute;
+		width: 150px;
+	  	height: 40px;
+	}
+
+		/*targets psuedobutton text*/
+	.channel-id-title{
+		font-family: 'Playfair Display', serif;
+		font-size: 16px;
+		color: white;
+	}
+
+/*nav buttons*/
+
+		/*targets left side buttons that are not disabled*/
+	.js-previous-button:not(.disabled):hover{
+		background-color: #265366
+	}
+
+		/*targets left side buttons*/
+	.js-previous-button{
+		height: 50px;
+		width: 75px;
+	}
+
+		/*targets right side buttons that are not disabled*/
+	.js-next-button:not(.disabled):hover{
+		background-color: #265366
+	}
+
+		/*targets right side buttons*/
+	.js-next-button{
+		height: 50px;
+		width: 75px;
+	}
+
+		/*targets glyphs inside the buttons*/
+	.glyphicon{
+		font-size: 18px;
+		color: white;
+	}
+}
